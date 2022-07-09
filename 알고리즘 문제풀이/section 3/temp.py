@@ -10,4 +10,4 @@ for x in arr:
     print(x, end=' ')
 
 
-#sort와 sorted
+#sort와 sorted       
