@@ -1,3 +1,4 @@
+# https://vss121.tistory.com/54 꼭 복습
 def solution(s):
     res=list()  # 문자열 길이를 저장할 list
 
