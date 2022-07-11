@@ -10,22 +10,24 @@ def solution(s):
         cnt=1
         ss=""
         temp=""
-        for i in range(0,len(s)+1,j):
+        for i in range(0,len(s),j):
             if s[i:i+j]==temp:
                 cnt+=1
             else:
                 if cnt==1:
                     ss+=temp
                 else:
-                    ss+=str(cnt)+temp 
+                    ss+=str(cnt)+temp
                     cnt=1
-                temp=s[i:i+j] 
-
+                temp=s[i:i+j]
+        
         # 뒤쪽 문자열 처리    
         if cnt==1:
             ss+=temp
         else:
             ss+=str(cnt)+temp
+        
+        # list에 넣음
         res.append(len(ss)) 
 
     # 가장 짧은 것의 길이 return
