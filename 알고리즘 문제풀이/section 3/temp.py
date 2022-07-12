@@ -1,13 +1,10 @@
 import sys
 sys.stdin=open("C:/Users/ykkim/github/PYTHON/알고리즘 문제풀이/section 3/input.txt","rt")
-arr=[i for i in range(1,21)]
-for i in range(10):
+arr=list(range(21))
+for _ in range(10):
     a,b= map(int, input().split())
-    arr[a-1:b]=sorted(arr[a-1:b],reverse=True)
-    print(arr)
-
+    for i in range((b-a+1)//2):
+        arr[a+i], arr[b-i] = arr[b-i], arr[a+i]
+a.pop(0)    # 0번 index를 pop
 for x in arr:
     print(x, end=' ')
-
-
-#sort와 sorted       
